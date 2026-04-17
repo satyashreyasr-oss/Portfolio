@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Satya Shreyas Rachakonda — AI/ML Engineer</title>
+<meta name="description" content="AI/ML Engineer & Full-Stack Developer. Building production-ready AI systems — RAG pipelines, ML healthcare apps, and more."/>
+<meta property="og:title" content="Satya Shreyas Rachakonda — AI/ML Engineer"/>
+<meta property="og:description" content="2nd year CS student building production-grade AI systems. RAG pipelines, ML healthcare apps, credit risk models."/>
+<meta property="og:url" content="https://satyashreyasr.github.io"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23050810'/><text y='72' x='8' font-size='58' font-family='monospace' font-weight='bold' fill='%2300d4ff'>S</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{--bg:#050810;--bg2:#090d1a;--card:#0d1224;--border:#1a2240;--accent:#00d4ff;--accent2:#7c3aed;--accent3:#10b981;--text:#e2e8f0;--muted:#64748b;--glow:0 0 40px rgba(0,212,255,0.15);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--accent);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(0,212,255,0.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transition:width 0.2s,height 0.2s;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(5,8,16,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Space Mono',monospace;font-size:0.95rem;color:var(--accent);letter-spacing:0.1em;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;font-family:'Space Mono',monospace;}
+.nav-links a:hover{color:var(--accent);}
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:6rem 3rem 3rem;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent);}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);animation:float 8s ease-in-out infinite;}
+.orb1{width:500px;height:500px;background:rgba(0,212,255,0.06);top:-100px;right:-100px;}
+.orb2{width:400px;height:400px;background:rgba(124,58,237,0.06);bottom:-50px;left:-100px;animation-delay:-4s;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-30px);}}
+.hero-content{position:relative;z-index:1;max-width:900px;}
+.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);padding:0.35rem 1rem;border-radius:100px;font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--accent);margin-bottom:1.5rem;}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero-name{font-size:clamp(3rem,8vw,6rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:0.5rem;color:#fff;}
+.gtext{background:linear-gradient(135deg,#ffffff 0%,#00d4ff 55%,#7c3aed 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;}
+.hero-typing{font-family:'Space Mono',monospace;font-size:clamp(1rem,2.5vw,1.3rem);color:var(--accent);margin:0.8rem 0 1rem;min-height:2rem;}
+.cblink{animation:blink 1s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.hero-tagline{font-size:clamp(0.95rem,1.8vw,1.1rem);color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:2.5rem;}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn{padding:0.75rem 1.6rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;transition:all 0.2s;display:inline-flex;align-items:center;gap:0.5rem;cursor:none;}
+.btn-primary{background:var(--accent);color:#000;font-weight:700;border:1px solid var(--accent);}
+.btn-primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px);box-shadow:var(--glow);}
+.btn-outline{border:1px solid var(--border);color:var(--text);background:rgba(255,255,255,0.03);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--muted);font-size:0.68rem;font-family:'Space Mono',monospace;letter-spacing:0.1em;}
+.sline{width:1px;height:48px;background:linear-gradient(to bottom,var(--accent),transparent);animation:sa 2s ease-in-out infinite;}
+@keyframes sa{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);}100%{transform:scaleY(0);transform-origin:bottom;}}
+/* SECTIONS */
+section{padding:6rem 3rem;position:relative;z-index:1;}
+.container{max-width:1100px;margin:0 auto;}
+.slabel{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem;}
+.stitle{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.8rem;}
+.sline2{width:40px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-bottom:3rem;}
+/* ABOUT */
+#about{background:var(--bg2);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-text p{color:var(--muted);line-height:1.8;font-size:0.98rem;margin-bottom:1.2rem;}
+.about-text p strong{color:var(--text);}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s;}
+.stat-card:hover{border-color:var(--accent);transform:translateY(-4px);}
+.stat-num{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#00d4ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;}
+.stat-label{color:var(--muted);font-size:0.8rem;margin-top:0.3rem;}
+/* GITHUB STATS */
+.github-section{margin-top:3rem;padding:2rem;background:var(--card);border:1px solid var(--border);border-radius:20px;}
+.github-section-title{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.15em;color:var(--accent);text-transform:uppercase;margin-bottom:1.5rem;}
+.github-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.github-stats-grid img{width:100%;border-radius:10px;transition:transform 0.2s;}
+.github-stats-grid img:hover{transform:translateY(-3px);}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
+.skill-group{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s;}
+.skill-group:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--glow);}
+.sg-title{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;color:var(--accent);text-transform:uppercase;margin-bottom:1rem;}
+.stags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.stag{background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.12);color:var(--text);padding:0.28rem 0.7rem;border-radius:100px;font-size:0.76rem;font-family:'Space Mono',monospace;transition:all 0.2s;}
+.stag:hover{background:rgba(0,212,255,0.15);border-color:var(--accent);color:var(--accent);}
+/* PROJECTS */
+#projects{background:var(--bg2);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(0,212,255,0.3);box-shadow:var(--glow);}
+.pcard:hover::before{transform:scaleX(1);}
+.pheader{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;}
+.picon{width:42px;height:42px;border-radius:10px;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--accent);}
+.pstatus{font-family:'Space Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;padding:0.25rem 0.6rem;border-radius:100px;text-transform:uppercase;}
+.done{background:rgba(16,185,129,0.1);color:var(--accent3);border:1px solid rgba(16,185,129,0.2);}
+.ptitle{font-size:1.12rem;font-weight:700;margin-bottom:0.5rem;}
+.pdesc{color:var(--muted);font-size:0.86rem;line-height:1.65;margin-bottom:1rem;flex:1;}
+/* repo meta */
+.repo-meta{display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;}
+.repo-meta span{display:inline-flex;align-items:center;gap:0.3rem;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--muted);}
+.repo-meta .lang-dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+.ptags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.2rem;}
+.ptag{background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);color:#a78bfa;padding:0.2rem 0.55rem;border-radius:6px;font-size:0.7rem;font-family:'Space Mono',monospace;}
+.plinks{display:flex;gap:0.75rem;margin-top:auto;}
+.plink{display:inline-flex;align-items:center;gap:0.4rem;padding:0.48rem 0.9rem;border-radius:8px;font-size:0.76rem;text-decoration:none;font-family:'Space Mono',monospace;transition:all 0.2s;cursor:none;}
+.lgh{border:1px solid var(--border);color:var(--muted);}
+.lgh:hover{border-color:var(--text);color:var(--text);}
+.ldemo{background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);color:var(--accent);}
+.ldemo:hover{background:rgba(0,212,255,0.2);transform:translateY(-2px);box-shadow:var(--glow);}
+/* highlights strip */
+.phighlights{margin-bottom:1rem;}
+.phighlights ul{list-style:none;padding:0;}
+.phighlights li{color:var(--muted);font-size:0.82rem;line-height:1.6;padding-left:1rem;position:relative;margin-bottom:0.2rem;}
+.phighlights li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:0.65rem;top:0.25rem;}
+/* EXPERIENCE */
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;display:flex;gap:2rem;align-items:flex-start;transition:border-color 0.2s,transform 0.2s;max-width:700px;}
+.exp-card:hover{border-color:var(--accent);transform:translateY(-4px);}
+.exp-dot{width:44px;height:44px;flex-shrink:0;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.3);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--accent);}
+.exp-title{font-size:1.05rem;font-weight:700;margin-bottom:0.3rem;}
+.exp-co{color:var(--accent);font-size:0.86rem;margin-bottom:0.25rem;font-family:'Space Mono',monospace;}
+.exp-date{color:var(--muted);font-size:0.76rem;font-family:'Space Mono',monospace;margin-bottom:1rem;}
+.exp-ul{list-style:none;}
+.exp-ul li{color:var(--muted);font-size:0.86rem;line-height:1.7;padding-left:1rem;position:relative;margin-bottom:0.2rem;}
+.exp-ul li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:0.65rem;top:0.28rem;}
+/* CERTS */
+#certifications{background:var(--bg2);}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem;}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem;display:flex;align-items:center;gap:1rem;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:inherit;}
+.cert-card:hover{border-color:var(--accent);transform:translateX(5px);}
+.cert-icon{color:var(--accent);font-size:1.1rem;flex-shrink:0;}
+.cert-name{font-size:0.86rem;font-weight:600;line-height:1.4;}
+.cert-org{font-size:0.73rem;color:var(--muted);font-family:'Space Mono',monospace;}
+/* CONTACT */
+.contact-inner{max-width:600px;margin:0 auto;text-align:center;}
+.contact-inner p{color:var(--muted);line-height:1.8;margin-bottom:2.5rem;font-size:0.98rem;}
+.clinks{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.clink{display:inline-flex;align-items:center;gap:0.6rem;padding:0.85rem 1.6rem;border-radius:10px;text-decoration:none;font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:0.05em;transition:all 0.2s;cursor:none;}
+.ce{background:var(--accent);color:#000;font-weight:700;}
+.ce:hover{transform:translateY(-3px);box-shadow:var(--glow);}
+.cg{border:1px solid var(--border);color:var(--text);}
+.cg:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-3px);}
+.cl{border:1px solid var(--border);color:var(--text);}
+.cl:hover{border-color:#0077b5;color:#0077b5;transform:translateY(-3px);}
+footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.72rem;font-family:'Space Mono',monospace;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem;} .nav-links{display:none;}
+  section{padding:4rem 1.5rem;}
+  .about-grid{grid-template-columns:1fr;gap:2rem;}
+  .about-stats{grid-template-columns:1fr 1fr;}
+  .github-stats-grid{grid-template-columns:1fr;}
+  .exp-card{flex-direction:column;}
+  body{cursor:auto;} .cursor,.cursor-ring{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SSR<span style="color:var(--muted)">_portfolio</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for Internships &#183; Bengaluru, India</div>
+    <h1 class="hero-name">Satya Shreyas<br><span class="gtext">Rachakonda</span></h1>
+    <div class="hero-typing"><span id="typed"></span><span class="cblink">_</span></div>
+    <p class="hero-tagline">I build production-ready AI systems, not just models &#8212; from RAG pipelines to ML-powered healthcare apps with Gemini AI integration.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View My Work</a>
+      <a href="https://github.com/satyashreyasr-oss" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:satyashreyas.r@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>scroll</span><div class="sline"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="slabel">// who am i</div>
+      <h2 class="stitle">About Me</h2>
+      <div class="sline2"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a <strong>2nd year B.Tech student</strong> at Jain University specialising in AI &#38; ML &#8212; but I think less like a student and more like an engineer. I don't stop at Jupyter notebooks; I containerise, deploy, and ship.</p>
+        <p>From a <strong>full-stack RAG chatbot</strong> with Docker &#38; FastAPI, to an <strong>ML healthcare app</strong> with Gemini AI diagnosing 112 diseases from 256 symptoms at 99.79% accuracy, I care about systems that actually work in production.</p>
+        <p>When I'm not coding, I'm playing cricket, writing technical content, or grinding competitive programming. I speak <strong>4 languages</strong> &#8212; context switching comes naturally.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card"><div class="stat-num">8.5</div><div class="stat-label">CGPA out of 10</div></div>
+        <div class="stat-card"><div class="stat-num">4+</div><div class="stat-label">Public Repos</div></div>
+        <div class="stat-card"><div class="stat-num">99.79%</div><div class="stat-label">Best Model Accuracy</div></div>
+        <div class="stat-card"><div class="stat-num">256</div><div class="stat-label">Symptoms in SympAI</div></div>
+      </div>
+    </div>
+
+    <!-- GITHUB STATS -->
+    <div class="github-section reveal">
+      <div class="github-section-title"><i class="fab fa-github"></i> &nbsp;GitHub Activity</div>
+      <div class="github-stats-grid">
+        <img src="https://github-readme-stats.vercel.app/api?username=satyashreyasr-oss&show_icons=true&theme=tokyonight&bg_color=0d1224&border_color=1a2240&title_color=00d4ff&icon_color=7c3aed&text_color=e2e8f0&count_private=false&hide_border=false&rank_icon=github" alt="GitHub Stats" loading="lazy" onerror="this.style.display='none'"/>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=satyashreyasr-oss&layout=compact&theme=tokyonight&bg_color=0d1224&border_color=1a2240&title_color=00d4ff&text_color=e2e8f0&hide_border=false&langs_count=6" alt="Top Languages" loading="lazy" onerror="this.style.display='none'"/>
+      </div>
+      <div style="margin-top:1rem;text-align:right">
+        <a href="https://github.com/satyashreyasr-oss" target="_blank" style="font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--muted);text-decoration:none;">View full profile on GitHub &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal">
+      <div class="slabel">// what i use</div>
+      <h2 class="stitle">Tech Stack</h2>
+      <div class="sline2"></div>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <div class="sg-title"><i class="fas fa-code"></i> &nbsp;Languages</div>
+        <div class="stags"><span class="stag">Python</span><span class="stag">C++</span><span class="stag">Java</span><span class="stag">JavaScript</span><span class="stag">SQL</span><span class="stag">HTML/CSS</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title"><i class="fas fa-layer-group"></i> &nbsp;Frameworks</div>
+        <div class="stags"><span class="stag">React.js</span><span class="stag">FastAPI</span><span class="stag">Flask</span><span class="stag">TensorFlow</span><span class="stag">PyTorch</span><span class="stag">scikit-learn</span><span class="stag">Pandas</span><span class="stag">NumPy</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title"><i class="fas fa-brain"></i> &nbsp;AI / ML</div>
+        <div class="stags"><span class="stag">LLMs</span><span class="stag">RAG</span><span class="stag">NLP</span><span class="stag">Computer Vision</span><span class="stag">Transformers</span><span class="stag">CNN</span><span class="stag">Gemini AI</span><span class="stag">Deep Learning</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title"><i class="fas fa-wrench"></i> &nbsp;Tools &#38; Databases</div>
+        <div class="stags"><span class="stag">Docker</span><span class="stag">Git</span><span class="stag">ChromaDB</span><span class="stag">MongoDB</span><span class="stag">MySQL</span><span class="stag">Groq API</span><span class="stag">Streamlit</span><span class="stag">Joblib</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <div class="slabel">// what i've built</div>
+      <h2 class="stitle">Projects</h2>
+      <div class="sline2"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- SYMPAI -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-heartbeat"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">SympAI</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python 60% &#183; HTML 28%</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+          <span><i class="fas fa-code-branch" style="font-size:0.65rem"></i> MIT License</span>
+        </div>
+        <div class="pdesc">AI-powered healthcare diagnosis platform diagnosing 112 diseases from 256 symptoms using a 4-model ML ensemble. Includes CNN pneumonia detection, Gemini AI health chatbot with Indian emergency routing, deployed on Render.</div>
+        <div class="phighlights">
+          <ul>
+            <li>4-model ensemble (Naive Bayes, Random Forest, Extra Trees, Decision Tree) &#8212; <strong style="color:var(--accent3)">99.79% accuracy</strong></li>
+            <li>CNN pneumonia detector (91% accuracy) with auto-training pipeline on first launch</li>
+            <li>Gemini AI chatbot with emergency keyword detection routing to 112/108 (Indian services)</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">TensorFlow</span><span class="ptag">Flask</span>
+          <span class="ptag">scikit-learn</span><span class="ptag">Gemini AI</span><span class="ptag">CNN</span><span class="ptag">Gunicorn</span><span class="ptag">Render</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/SympAI" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://sympai-ym2f.onrender.com/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <!-- RTX4090 -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-robot"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">RTX 4090 AI Assistant</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc">Production RAG chatbot for NVIDIA RTX 4090 using ChromaDB vector embeddings and Groq LLM API (Llama 3, Llama 4). Semantic search over a structured AI/ML knowledge base, deployed publicly on Streamlit Cloud.</div>
+        <div class="phighlights">
+          <ul>
+            <li>RAG pipeline with sentence-transformer embeddings + ChromaDB for context-aware answers on GPU specs, LLM benchmarks &#38; workstation builds</li>
+            <li>Powered by Groq LLM API (Llama 3 &#38; Llama 4) for fast, production-grade inference</li>
+            <li>Deployed on Streamlit Cloud with live public access at a shareable URL</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">ChromaDB</span>
+          <span class="ptag">Groq API</span><span class="ptag">Llama 3/4</span><span class="ptag">RAG</span><span class="ptag">Sentence-Transformers</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/RTX4090-AI-Chatbot" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://rtx4090-ai-chatbot-ocp7gkkznqbtaerg5rnmaa.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <!-- SCORESENSE -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-chart-line"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">ScoreSense</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#f1e05a"></span>Jupyter Notebook</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc">ML-based credit scoring system using Logistic Regression with engineered financial features. Evaluated with ROC-AUC and confusion matrix. Maps risk probability to industry-standard score range (300&#8211;850).</div>
+        <div class="phighlights">
+          <ul>
+            <li>Features: credit utilization, default history, loan tenure, late payments, income</li>
+            <li>Stratified train-test split with feature scaling for unbiased evaluation</li>
+            <li>End-to-end ML pipeline from raw data to actionable credit score output</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">scikit-learn</span>
+          <span class="ptag">Logistic Regression</span><span class="ptag">ROC-AUC</span><span class="ptag">Jupyter</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/Scoresense" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/satyashreyasr-oss/Scoresense" target="_blank" class="plink ldemo"><i class="fas fa-book-open"></i> View Notebook</a>
+        </div>
+      </div>
+
+      <!-- Student Performance Predictor -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">Student Performance Predictor</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python 47% &#183; JS 46%</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc">Full-stack ML web app predicting student final exam scores from 10 academic features. Live accuracy dashboard with MAE/RMSE/R&#178; metrics, scatter plots, and feature importance &#8212; backed by FastAPI and React.js.</div>
+        <div class="phighlights">
+          <ul>
+            <li>Gradient Boosting model achieving <strong style="color:var(--accent3)">R&#178; = 0.92</strong>, MAE = 3.9 on held-out test set</li>
+            <li>FastAPI backend with SQLAlchemy + SQLite; stores predictions and compares vs actual results</li>
+            <li>React.js dashboard with real-time scatter plot, error histogram &#38; feature importance chart</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">React.js</span>
+          <span class="ptag">scikit-learn</span><span class="ptag">SQLite</span><span class="ptag">Gradient Boosting</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/Student-Academic-Performance-Prediction-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://academic-performance-ml.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="slabel">// where i've worked</div>
+      <h2 class="stitle">Experience</h2>
+      <div class="sline2"></div>
+    </div>
+    <div class="reveal">
+      <div class="exp-card">
+        <div class="exp-dot"><i class="fas fa-laptop-code"></i></div>
+        <div>
+          <div class="exp-title">Front-End Development Intern</div>
+          <div class="exp-co">Cognifyz Technologies</div>
+          <div class="exp-date">Aug 2025 &#8211; Sep 2025 &nbsp;&#183;&nbsp; Remote</div>
+          <ul class="exp-ul">
+            <li>Developed responsive, accessible UIs using React.js, HTML, CSS &#38; JavaScript with focus on scalability and cross-browser performance.</li>
+            <li>Delivered independent project tasks following agile workflows; strengthened debugging skills through real-time coding challenges.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="reveal">
+      <div class="slabel">// credentials</div>
+      <h2 class="stitle">Certifications</h2>
+      <div class="sline2"></div>
+    </div>
+    <div class="certs-grid reveal">
+      <a href="https://courses.cognitiveclass.ai/certificates/7107c49b7ab641259e3688ace29e2874" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Machine Learning with Python</div><div class="cert-org">IBM Cognitive Class</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/BWS7HB64J1DI" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">ML Web App with Streamlit &#38; Python</div><div class="cert-org">Coursera Project Network</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/KQOWWWRXY3ZQ" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Crash Course on Python</div><div class="cert-org">Google</div></div></a>
+      <div class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Introduction to AI</div><div class="cert-org">IBM</div></div></div>
+      <a href="https://www.hackerrank.com/certificates/d7e349a2cc20" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Problem Solving (Basic)</div><div class="cert-org">HackerRank</div></div></a>
+      <a href="https://www.hackerrank.com/certificates/8e902252a1ab" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Python (Basic)</div><div class="cert-org">HackerRank</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/YJM3E81KMHL6" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Thinking for Innovation</div><div class="cert-org">University of Virginia, Coursera</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/4MEJ3OXN2MS9" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Data Warehousing: Schema, ETL, Optimal Performance</div><div class="cert-org">Coursera</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/URKWYWQYS3BT" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Introduction to Computing Systems</div><div class="cert-org">BITTS</div></div></a>
+      <a href="https://www.coursera.org/account/accomplishments/certificate/BWS7HB64J1DI" target="_blank" class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">Build a Machine Learning Web App with Streamlit and Python</div><div class="cert-org">Coursera</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="slabel" style="text-align:center">// let's connect</div>
+      <h2 class="stitle" style="text-align:center">Open to Internships</h2>
+      <div class="sline2" style="margin:1rem auto 2rem"></div>
+      <p>Actively looking for internship opportunities in AI/ML, full-stack development, or software engineering. If you're building something interesting, I'd love to be part of it.</p>
+      <div class="clinks">
+        <a href="mailto:satyashreyas.r@gmail.com" class="clink ce"><i class="fas fa-envelope"></i> satyashreyas.r@gmail.com</a>
+        <a href="https://github.com/satyashreyasr-oss" target="_blank" class="clink cg"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/rsatyashreyas" target="_blank" class="clink cl"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><p>Designed &#38; built by Satya Shreyas Rachakonda &nbsp;&#183;&nbsp; 2026 &nbsp;&#183;&nbsp; <a href="https://github.com/satyashreyasr-oss" style="color:var(--accent);text-decoration:none">github.com/satyashreyasr-oss</a></p></footer>
+
+<script>
+// CURSOR
+var cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing'),mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cursor.style.transform='translate('+(mx-4)+'px,'+(my-4)+'px)';});
+function ar(){rx+=(mx-rx-16)*0.12;ry+=(my-ry-16)*0.12;ring.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(ar);}ar();
+document.querySelectorAll('a,button').forEach(function(el){
+  el.addEventListener('mouseenter',function(){ring.style.width='52px';ring.style.height='52px';});
+  el.addEventListener('mouseleave',function(){ring.style.width='32px';ring.style.height='32px';});
+});
+// TYPING
+var roles=['AI/ML Engineer','Full-Stack Developer','RAG Pipeline Builder','Gemini AI Integrator','Open Source Contributor'];
+var ri=0,ci=0,del=false,tel=document.getElementById('typed');
+function type(){
+  var w=roles[ri];
+  if(!del){tel.textContent=w.slice(0,++ci);if(ci===w.length){del=true;setTimeout(type,1800);return;}}
+  else{tel.textContent=w.slice(0,--ci);if(ci===0){del=false;ri=(ri+1)%roles.length;}}
+  setTimeout(type,del?60:100);
+}
+type();
+// REVEAL
+function rv(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight-30)el.classList.add('visible');});}
+if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.05,rootMargin:'0px 0px -20px 0px'});document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});}
+window.addEventListener('scroll',rv,{passive:true});
+rv();setTimeout(rv,100);setTimeout(rv,500);
+</script>
+</body>
+</html>
