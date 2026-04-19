@@ -61,14 +61,14 @@ section{padding:6rem 3rem;position:relative;z-index:1;}
 .sline2{width:40px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-bottom:3rem;}
 /* ABOUT */
 #about{background:var(--bg2);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-grid{display:grid;grid-template-columns:55% 45%;gap:4rem;align-items:center;}
 .about-text p{color:var(--muted);line-height:1.8;font-size:1.15rem;margin-bottom:1.2rem;}
 .about-text p strong{color:var(--text);}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-self:center;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s;display:flex;flex-direction:column;justify-content:center;}
 .stat-card:hover{border-color:var(--accent);transform:translateY(-4px);}
 .stat-num{font-size:2rem;font-weight:800;background:linear-gradient(135deg,#00d4ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;}
-.stat-label{color:var(--muted);font-size:0.8rem;margin-top:0.3rem;}
+.stat-label{color:var(--muted);font-size:0.85rem;margin-top:0.3rem;}
 
 /* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;}
