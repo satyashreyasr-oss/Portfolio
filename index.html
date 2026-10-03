@@ -269,7 +269,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="phighlights">
           <ul>
             <li>4-model ensemble (Naive Bayes, Random Forest, Extra Trees, Decision Tree) &#8212; <strong style="color:var(--accent3)">99.79% accuracy</strong></li>
-            <li>CNN pneumonia detector (91% accuracy) with auto-training pipeline on first launch</li>
+            <li>CNN pneumonia detector (<strong style="color:var(--accent3)">91% accuracy</strong>) with auto-training pipeline on first launch</li>
             <li>Gemini AI chatbot with emergency keyword detection routing to 112/108 (Indian services)</li>
           </ul>
         </div>
@@ -298,7 +298,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="phighlights">
           <ul>
             <li>RAG pipeline with sentence-transformer embeddings + ChromaDB for context-aware answers on GPU specs, LLM benchmarks &#38; workstation builds</li>
-            <li>Powered by Groq LLM API (Llama 3 &#38; Llama 4) for fast, production-grade inference</li>
+            <li>Powered by Groq LLM API (Llama 3.x &#38; 4, Qwen 3, Kimi K2) with switchable models from the sidebar</li>
             <li>Deployed on Streamlit Cloud with live public access at a shareable URL</li>
           </ul>
         </div>
@@ -328,7 +328,8 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
           <ul>
             <li>Features: credit utilization, default history, loan tenure, late payments, income</li>
             <li>Stratified train-test split with feature scaling for unbiased evaluation</li>
-            <li>End-to-end ML pipeline from raw data to actionable credit score output</li>
+            <li>Trained on <strong style="color:var(--accent3)">1,000 synthetic financial records</strong> with balanced class weights, reaching <strong style="color:var(--accent3)">~0.96 ROC-AUC</strong></li>
+            <li>End-to-end ML pipeline from raw data to actionable credit score output, with inference on new customer profiles</li>
           </ul>
         </div>
         <div class="ptags">
@@ -355,7 +356,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="pdesc"><strong style="color:var(--accent)">Full-stack ML web app</strong> predicting student final exam scores from <strong style="color:var(--accent3)">10 academic features</strong>. Live accuracy dashboard with <strong style="color:var(--accent)">MAE/RMSE/R&#178;</strong> metrics, scatter plots, and feature importance &#8212; backed by <strong style="color:var(--accent)">FastAPI</strong> and <strong style="color:var(--accent)">React.js</strong>.</div>
         <div class="phighlights">
           <ul>
-            <li>Gradient Boosting model achieving <strong style="color:var(--accent3)">R&#178; = 0.92</strong>, MAE = 3.9 on held-out test set</li>
+            <li>Gradient Boosting model achieving <strong style="color:var(--accent3)">R&#178; = 0.92</strong>, <strong style="color:var(--accent3)">MAE = 3.9</strong> on held-out test set</li>
             <li>FastAPI backend with SQLAlchemy + SQLite; stores predictions and compares vs actual results</li>
             <li>React.js dashboard with real-time scatter plot, error histogram &#38; feature importance chart</li>
           </ul>
@@ -367,6 +368,119 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="plinks">
           <a href="https://github.com/satyashreyasr-oss/Student-Academic-Performance-Prediction-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
           <a href="https://academic-performance-ml.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <!-- CURATOR -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-broom"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">Curator</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">AI storage cleanup agent</strong> that identifies reclaimable disk space using <strong style="color:var(--accent)">SHA-256 duplicate detection</strong>, stale git-repo analysis, and build-artifact scanning &#8212; strictly <strong style="color:var(--accent3)">read-only by default</strong>, with every deletion routed through the Recycle Bin.</div>
+        <div class="phighlights">
+          <ul>
+            <li>Two-phase safety model &#8212; scan generates JSON/HTML reports read-only; apply is the only phase that deletes, and only within configured scan_roots</li>
+            <li>Detects duplicate files, redundant project folders via Jaccard similarity, unused datasets, junk files &#38; build artifacts (node_modules, __pycache__, .venv)</li>
+            <li>Project completeness scoring weighs file count, git history &#38; size to avoid flagging active work</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">SHA-256</span><span class="ptag">YAML Config</span><span class="ptag">CLI</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/Curator" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <!-- AUTODUB AI -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-language"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">AutoDub AI</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Automated video dubbing pipeline</strong> that converts YouTube videos in any language into <strong style="color:var(--accent3)">English-dubbed</strong> versions, preserving the original speaker's pitch, energy, and video quality without re-encoding.</div>
+        <div class="phighlights">
+          <ul>
+            <li><strong style="color:var(--accent)">5-stage pipeline</strong> (download, transcribe &#38; translate, synthesize, remux) that processed a <strong style="color:var(--accent3)">2hr 16min video in 28 minutes</strong></li>
+            <li>Speech recognition via <strong style="color:var(--accent)">faster-whisper</strong> and TTS synthesis via <strong style="color:var(--accent)">edge-tts</strong>, with per-segment tempo adjustment for lip-sync alignment</li>
+            <li>Pitch-based voice selection using librosa to match male/female vocal characteristics</li>
+            <li>Zero video re-encoding (ffmpeg stream copy) plus an optional IndicTrans2 backend for higher-quality Indian language translation</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">faster-whisper</span><span class="ptag">edge-tts</span><span class="ptag">FFmpeg</span><span class="ptag">librosa</span><span class="ptag">Streamlit</span><span class="ptag">Gradio</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/AutoDub-AI-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <!-- SCHEDULING ASSISTANT -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-calendar-check"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">Scheduling Assistant</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Multi-agent scheduling system</strong> built with <strong style="color:var(--accent)">LangGraph</strong>, pairing a Triage Agent that routes conversations with a Booking Specialist that resolves relative dates, checks availability, and confirms bookings.</div>
+        <div class="phighlights">
+          <ul>
+            <li>Two cooperating LangGraph agents with tool-calling for date resolution, availability checks, slot reservation &#38; notifications</li>
+            <li>SQLite checkpointing keeps conversations alive across page refreshes; Groq <strong style="color:var(--accent)">llama-3.3-70b-versatile</strong> powers reasoning</li>
+            <li>Conflict negotiation offers alternative slots; deterministic date resolution (dateparser) guards against LLM errors</li>
+            <li>Deployed on Streamlit Community Cloud with a live chat UI</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">LangGraph</span><span class="ptag">Groq API</span><span class="ptag">SQLite</span><span class="ptag">Streamlit</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/Scheduling-Assistant" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://scheduling-assistant-amsuy6znxstqjeqrlokrok.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <!-- CUSTOMER SUPPORT RAG AGENT -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-headset"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">Customer Support RAG Agent</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Retrieval-Augmented Generation</strong> customer support assistant with <strong style="color:var(--accent)">history-aware retrieval</strong> and cited sources, built on <strong style="color:var(--accent3)">LangChain LCEL chains</strong> and Groq's Llama 3.3 70B.</div>
+        <div class="phighlights">
+          <ul>
+            <li>FAISS vector store with local MiniLM embeddings indexing a mock FAQ knowledge base</li>
+            <li>History-aware retriever rewrites follow-up questions into standalone queries before retrieval</li>
+            <li>Streamlit chat UI cites source filename, section &#38; line numbers for every grounded answer</li>
+            <li>Deployed on Streamlit Community Cloud with fully isolated per-user sessions</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Groq API</span><span class="ptag">FAISS</span><span class="ptag">Sentence-Transformers</span><span class="ptag">Streamlit</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/customer-support-rag-agent" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://customer-support-rag-agent-cgrrlaqpnktrihjemvztrg.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
 
