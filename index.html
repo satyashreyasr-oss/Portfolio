@@ -283,6 +283,92 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         </div>
       </div>
 
+      <!-- CUSTOMER SUPPORT RAG AGENT -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-headset"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">Customer Support RAG Agent</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Retrieval-Augmented Generation</strong> customer support assistant with <strong style="color:var(--accent)">history-aware retrieval</strong> and cited sources, built on <strong style="color:var(--accent3)">LangChain LCEL chains</strong> and Groq's Llama 3.3 70B.</div>
+        <div class="phighlights">
+          <ul>
+            <li>FAISS vector store with local MiniLM embeddings indexing a mock FAQ knowledge base</li>
+            <li>History-aware retriever rewrites follow-up questions into standalone queries before retrieval</li>
+            <li>Streamlit chat UI cites source filename, section &#38; line numbers for every grounded answer</li>
+            <li>Deployed on Streamlit Community Cloud with fully isolated per-user sessions</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Groq API</span><span class="ptag">FAISS</span><span class="ptag">Sentence-Transformers</span><span class="ptag">Streamlit</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/customer-support-rag-agent" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://customer-support-rag-agent-cgrrlaqpnktrihjemvztrg.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <!-- AUTODUB AI -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-language"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">AutoDub AI</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Automated video dubbing pipeline</strong> that converts YouTube videos in any language into <strong style="color:var(--accent3)">English-dubbed</strong> versions, preserving the original speaker's pitch, energy, and video quality without re-encoding.</div>
+        <div class="phighlights">
+          <ul>
+            <li><strong style="color:var(--accent)">5-stage pipeline</strong> (download, transcribe &#38; translate, synthesize, remux) that processed a <strong style="color:var(--accent3)">2hr 16min video in 28 minutes</strong></li>
+            <li>Speech recognition via <strong style="color:var(--accent)">faster-whisper</strong> and TTS synthesis via <strong style="color:var(--accent)">edge-tts</strong>, with per-segment tempo adjustment for lip-sync alignment</li>
+            <li>Pitch-based voice selection using librosa to match male/female vocal characteristics</li>
+            <li>Zero video re-encoding (ffmpeg stream copy) plus an optional IndicTrans2 backend for higher-quality Indian language translation</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">faster-whisper</span><span class="ptag">edge-tts</span><span class="ptag">FFmpeg</span><span class="ptag">librosa</span><span class="ptag">Streamlit</span><span class="ptag">Gradio</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/AutoDub-AI-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <!-- CohortIQ -->
+      <div class="pcard reveal">
+        <div class="pheader">
+          <div class="picon"><i class="fas fa-graduation-cap"></i></div>
+          <span class="pstatus done">Completed</span>
+        </div>
+        <div class="ptitle">CohortIQ</div>
+        <div class="repo-meta">
+          <span><span class="lang-dot" style="background:#3572A5"></span>Python 47% &#183; JS 46%</span>
+          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
+        </div>
+        <div class="pdesc"><strong style="color:var(--accent)">Full-stack ML web app</strong> predicting student final exam scores from <strong style="color:var(--accent3)">10 academic features</strong>. Live accuracy dashboard with <strong style="color:var(--accent)">MAE/RMSE/R&#178;</strong> metrics, scatter plots, and feature importance &#8212; backed by <strong style="color:var(--accent)">FastAPI</strong> and <strong style="color:var(--accent)">React.js</strong>.</div>
+        <div class="phighlights">
+          <ul>
+            <li>Gradient Boosting model achieving <strong style="color:var(--accent3)">R&#178; = 0.92</strong>, <strong style="color:var(--accent3)">MAE = 3.9</strong> on held-out test set</li>
+            <li>FastAPI backend with SQLAlchemy + SQLite; stores predictions and compares vs actual results</li>
+            <li>React.js dashboard with real-time scatter plot, error histogram &#38; feature importance chart</li>
+          </ul>
+        </div>
+        <div class="ptags">
+          <span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">React.js</span>
+          <span class="ptag">scikit-learn</span><span class="ptag">SQLite</span><span class="ptag">Gradient Boosting</span>
+        </div>
+        <div class="plinks">
+          <a href="https://github.com/satyashreyasr-oss/Student-Academic-Performance-Prediction-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://academic-performance-ml.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
       <!-- RTX4090 -->
       <div class="pcard reveal">
         <div class="pheader">
@@ -342,35 +428,6 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         </div>
       </div>
 
-      <!-- CohortIQ -->
-      <div class="pcard reveal">
-        <div class="pheader">
-          <div class="picon"><i class="fas fa-graduation-cap"></i></div>
-          <span class="pstatus done">Completed</span>
-        </div>
-        <div class="ptitle">CohortIQ</div>
-        <div class="repo-meta">
-          <span><span class="lang-dot" style="background:#3572A5"></span>Python 47% &#183; JS 46%</span>
-          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
-        </div>
-        <div class="pdesc"><strong style="color:var(--accent)">Full-stack ML web app</strong> predicting student final exam scores from <strong style="color:var(--accent3)">10 academic features</strong>. Live accuracy dashboard with <strong style="color:var(--accent)">MAE/RMSE/R&#178;</strong> metrics, scatter plots, and feature importance &#8212; backed by <strong style="color:var(--accent)">FastAPI</strong> and <strong style="color:var(--accent)">React.js</strong>.</div>
-        <div class="phighlights">
-          <ul>
-            <li>Gradient Boosting model achieving <strong style="color:var(--accent3)">R&#178; = 0.92</strong>, <strong style="color:var(--accent3)">MAE = 3.9</strong> on held-out test set</li>
-            <li>FastAPI backend with SQLAlchemy + SQLite; stores predictions and compares vs actual results</li>
-            <li>React.js dashboard with real-time scatter plot, error histogram &#38; feature importance chart</li>
-          </ul>
-        </div>
-        <div class="ptags">
-          <span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">React.js</span>
-          <span class="ptag">scikit-learn</span><span class="ptag">SQLite</span><span class="ptag">Gradient Boosting</span>
-        </div>
-        <div class="plinks">
-          <a href="https://github.com/satyashreyasr-oss/Student-Academic-Performance-Prediction-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://academic-performance-ml.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-        </div>
-      </div>
-
       <!-- CURATOR -->
       <div class="pcard reveal">
         <div class="pheader">
@@ -395,34 +452,6 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         </div>
         <div class="plinks">
           <a href="https://github.com/satyashreyasr-oss/Curator" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
-        </div>
-      </div>
-
-      <!-- AUTODUB AI -->
-      <div class="pcard reveal">
-        <div class="pheader">
-          <div class="picon"><i class="fas fa-language"></i></div>
-          <span class="pstatus done">Completed</span>
-        </div>
-        <div class="ptitle">AutoDub AI</div>
-        <div class="repo-meta">
-          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
-        </div>
-        <div class="pdesc"><strong style="color:var(--accent)">Automated video dubbing pipeline</strong> that converts YouTube videos in any language into <strong style="color:var(--accent3)">English-dubbed</strong> versions, preserving the original speaker's pitch, energy, and video quality without re-encoding.</div>
-        <div class="phighlights">
-          <ul>
-            <li><strong style="color:var(--accent)">5-stage pipeline</strong> (download, transcribe &#38; translate, synthesize, remux) that processed a <strong style="color:var(--accent3)">2hr 16min video in 28 minutes</strong></li>
-            <li>Speech recognition via <strong style="color:var(--accent)">faster-whisper</strong> and TTS synthesis via <strong style="color:var(--accent)">edge-tts</strong>, with per-segment tempo adjustment for lip-sync alignment</li>
-            <li>Pitch-based voice selection using librosa to match male/female vocal characteristics</li>
-            <li>Zero video re-encoding (ffmpeg stream copy) plus an optional IndicTrans2 backend for higher-quality Indian language translation</li>
-          </ul>
-        </div>
-        <div class="ptags">
-          <span class="ptag">Python</span><span class="ptag">faster-whisper</span><span class="ptag">edge-tts</span><span class="ptag">FFmpeg</span><span class="ptag">librosa</span><span class="ptag">Streamlit</span><span class="ptag">Gradio</span>
-        </div>
-        <div class="plinks">
-          <a href="https://github.com/satyashreyasr-oss/AutoDub-AI-" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
         </div>
       </div>
 
@@ -452,35 +481,6 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="plinks">
           <a href="https://github.com/satyashreyasr-oss/Scheduling-Assistant" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
           <a href="https://scheduling-assistant-amsuy6znxstqjeqrlokrok.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-        </div>
-      </div>
-
-      <!-- CUSTOMER SUPPORT RAG AGENT -->
-      <div class="pcard reveal">
-        <div class="pheader">
-          <div class="picon"><i class="fas fa-headset"></i></div>
-          <span class="pstatus done">Completed</span>
-        </div>
-        <div class="ptitle">Customer Support RAG Agent</div>
-        <div class="repo-meta">
-          <span><span class="lang-dot" style="background:#3572A5"></span>Python</span>
-          <span><i class="fas fa-star" style="color:#f59e0b;font-size:0.65rem"></i> 0</span>
-        </div>
-        <div class="pdesc"><strong style="color:var(--accent)">Retrieval-Augmented Generation</strong> customer support assistant with <strong style="color:var(--accent)">history-aware retrieval</strong> and cited sources, built on <strong style="color:var(--accent3)">LangChain LCEL chains</strong> and Groq's Llama 3.3 70B.</div>
-        <div class="phighlights">
-          <ul>
-            <li>FAISS vector store with local MiniLM embeddings indexing a mock FAQ knowledge base</li>
-            <li>History-aware retriever rewrites follow-up questions into standalone queries before retrieval</li>
-            <li>Streamlit chat UI cites source filename, section &#38; line numbers for every grounded answer</li>
-            <li>Deployed on Streamlit Community Cloud with fully isolated per-user sessions</li>
-          </ul>
-        </div>
-        <div class="ptags">
-          <span class="ptag">Python</span><span class="ptag">LangChain</span><span class="ptag">Groq API</span><span class="ptag">FAISS</span><span class="ptag">Sentence-Transformers</span><span class="ptag">Streamlit</span>
-        </div>
-        <div class="plinks">
-          <a href="https://github.com/satyashreyasr-oss/customer-support-rag-agent" target="_blank" class="plink lgh"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://customer-support-rag-agent-cgrrlaqpnktrihjemvztrg.streamlit.app/" target="_blank" class="plink ldemo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
 
